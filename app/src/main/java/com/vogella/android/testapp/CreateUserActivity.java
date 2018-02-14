@@ -2,7 +2,6 @@ package com.vogella.android.testapp;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.app.Activity;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
