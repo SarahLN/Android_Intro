@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
@@ -23,9 +24,13 @@ public class CreateUserActivity extends AppCompatActivity {
                 switch (checkedId) {
                     case R.id.male:
                         male = true;
+                        findViewById(R.id.female).setAlpha(0.5f);
+                        findViewById(R.id.male).setAlpha(1.0f);
                         break;
                     case R.id.female:
                         male = false;
+                        findViewById(R.id.male).setAlpha(0.5f);
+                        findViewById(R.id.female).setAlpha(1.0f);
                         break;
                 }
             }
