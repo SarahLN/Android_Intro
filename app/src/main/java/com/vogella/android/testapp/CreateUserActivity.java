@@ -9,17 +9,12 @@ import android.widget.Toast;
 
 public class CreateUserActivity extends AppCompatActivity {
 
+    boolean male = true;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_user);
-    }
-
-    public void onClick(View view) {
-        EditText input = (EditText) findViewById(R.id.username);
-        String string = input.getText().toString();
-
-        Boolean male = true;
 
         final RadioGroup radioGroup = (RadioGroup) findViewById(R.id.gender);
         radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
@@ -35,6 +30,11 @@ public class CreateUserActivity extends AppCompatActivity {
                 }
             }
         });
+    }
+
+    public void onClick(View view) {
+        EditText input = (EditText) findViewById(R.id.username);
+        String string = input.getText().toString();
 
         String gender;
 
@@ -46,4 +46,6 @@ public class CreateUserActivity extends AppCompatActivity {
 
         Toast.makeText(this, "User " + string + " (" + gender + ") created.", Toast.LENGTH_LONG).show();
     }
+
+
 }
